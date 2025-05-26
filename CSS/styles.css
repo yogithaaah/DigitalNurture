@@ -1,0 +1,249 @@
+/* Reset & font import */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Base styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('images/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-backdrop-filter: blur(4px);
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  background-color: #004080;
+  padding: 12px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+}
+nav a:hover {
+  transform: scale(1.05);
+  background-color: #006699;
+  border-radius: 5px;
+}
+
+/* Welcome banner */
+#welcomeBanner {
+  background: linear-gradient(to right, #0055a5, #008cba);
+  color: palevioletred;
+  padding: 25px;
+  margin: 30px auto;
+  width: 80%;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.8em;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Headings and text */
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #003366;
+  text-transform: uppercase;
+}
+h3, p {
+  font-size: 1em;
+  color: #333;
+  margin: 10px 0;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+/* Table styles */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+th, td {
+  padding: 12px;
+  border: 1px solid #aaa;
+  background-color: rgba(240, 248, 255, 0.6);
+}
+tr:nth-child(even) {
+  background-color: rgba(200, 230, 255, 0.4);
+}
+caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+table td {
+  vertical-align: top;
+  width: 33%;
+}
+table img {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  border: 3px solid #008cba;
+  border-radius: 10px;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Forms */
+form, .video-container, section, #welcomeBanner {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  animation: fadeInUp 0.8s ease-in-out both;
+}
+form {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+}
+input, select, textarea, button {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid #008cba;
+}
+
+/* Event card */
+.eventCard {
+  border: 2px solid #007BFF;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.eventCard:hover {
+  transform: scale(1.03);
+}
+
+/* Lists */
+ul, ol {
+  list-style-type: square;
+  list-style-position: inside;
+  margin-left: 20px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Multicolumn text */
+.news-article {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid gray;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+/* Video section */
+.video-container {
+  width: 80%;
+  margin: 20px auto;
+}
+.video-container video {
+  width: 100%;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Buttons */
+button {
+  background-color: #008cba;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  transform: scale(1.05);
+  background-color: #006699;
+}
+
+/* Section layout */
+section {
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+/* Main layout */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+  body {
+    font-size: 90%;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  table td {
+    display: block;
+    width: 100%;
+  }
+  table tr {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
