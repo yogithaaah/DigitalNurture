@@ -133,9 +133,9 @@
         <input type="date" name="date" required>
         <select name="eventType" id="eventType" onchange="savePreference(); showFee();">
           <option value="">Select Event Type</option>
-          <option value="Music Night">Music Night</option>
-          <option value="Food Festival">Food Festival</option>
-          <option value="Tech Talk">Tech Talk</option>
+          <option value="Standup-Comedy">Standup Comedy</option>
+          <option value="Farmers Market">Farmers Market</option>
+          <option value="DIY Workshop">DIY Workshop</option>
         </select>
         <input type="tel" name="phone" placeholder="Phone Number" onblur="validatePhone(this);">
         <textarea name="message" placeholder="Your Message" onkeyup="countChars(this);"></textarea><br>
@@ -151,9 +151,10 @@
         <input type="text" id="phone" placeholder="Phone Number" onblur="validateFeedbackPhone();" required><br>
         <select id="eventDropdown" onchange="displayFee();">
           <option value="">Select Event</option>
-          <option value="Music Night">Music Night</option>
-          <option value="Food Festival">Food Festival</option>
-          <option value="Tech Talk">Tech Talk</option>
+          <option value="">Select Event Type</option>
+          <option value="Standup-Comedy">Standup Comedy</option>
+          <option value="Farmers Market">Farmers Market</option>
+          <option value="DIY Workshop">DIY Workshop</option>
         </select><br>
         <p id="feeDisplay"></p>
         <textarea id="feedbackText" placeholder="Your Feedback" onkeyup="countFeedbackChars();"></textarea><br>
@@ -194,11 +195,13 @@
       
     <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 10px;">
         <select id="eventType" style="padding: 5px; font-size: 16px; width: 150pt;">
-          <option value="Wedding">Wedding</option>
-          <option value="Birthday">Birthday</option>
-          <option value="Corporate">Corporate</option>
-          <option value="Graduation">Graduation</option>
-          <option value="Engagement">Engagement</option>
+          <option value="">Select Event Type</option>
+          <option value="Standup-Comedy">Standup Comedy</option>
+          <option value="Farmers Market">Farmers Market</option>
+          <option value="DIY Workshop">DIY Workshop</option>
+          <option value="Standup-Comedy">Craft Fair</option>
+          <option value="Farmers Market">Dance Night</option>
+          <option value="DIY Workshop">Photography Contest</option>
         </select>
       
         <button type="button" onclick="savePref()" style="padding: 6px 12px; font-size: 16px; cursor: pointer; width: 150pt;">
@@ -226,7 +229,7 @@
   <script>
     function savePref() {
    var eventType = document.getElementById("eventType").value;
-   document.getElementById("preferenceMessage").innerText = "Preference Saved" + eventType;
+   document.getElementById("preferenceMessage").innerText = "Preference Saved " + eventType;
 }
     function showConfirmation() {
       document.getElementById('charCount').innerHTML = "Registration submitted!";
