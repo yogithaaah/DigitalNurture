@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap 5 – Folder Structure & JavaScript Inclusion</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .folder-tree {
+      background: #e9ecef;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      font-family: monospace;
+    }
+    .highlight {
+      color: #0d6efd;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="bg-dark text-white text-center py-4">
+    <h1>📁 Bootstrap Folder Structure & JavaScript Plugins</h1>
+  </header>
+
+  <main class="container my-5">
+    <section>
+      <h2 class="text-success">Exercise 2.1 – Bootstrap Folder Overview</h2>
+      <div class="folder-tree">
+        bootstrap/<br>
+        ├── <span class="highlight">css/</span><br>
+        │   ├── bootstrap.min.css<br>
+        │   ├── bootstrap.css<br>
+        │   └── bootstrap.min.css.map<br>
+        ├── <span class="highlight">js/</span><br>
+        │   ├── bootstrap.bundle.min.js<br>
+        │   ├── bootstrap.min.js<br>
+        │   └── bootstrap.bundle.min.js.map<br>
+        └── <span class="highlight">icons/</span> (optional)<br>
+      </div>
+      <p class="mt-3">
+        The <span class="highlight">css/</span> folder contains the compiled Bootstrap stylesheets.<br>
+        The <span class="highlight">js/</span> folder includes essential JavaScript plugins and dependencies.<br>
+        If downloaded, <span class="highlight">icons/</span> provides Bootstrap’s SVG icons.
+      </p>
+    </section>
+
+    <section class="mt-5">
+      <h2 class="text-success">Exercise 2.2 – Including Bootstrap JavaScript</h2>
+      <p>
+        To include Bootstrap’s JavaScript plugins, use the following script tag:
+      </p>
+      <div class="folder-tree">
+        &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+      </div>
+      <p>
+        The <code>bootstrap.bundle.min.js</code> includes both Bootstrap's JavaScript and Popper.js, enabling components like dropdowns and tooltips.
+      </p>
+    </section>
+  </main>
+
+  <footer class="bg-light text-center py-3">
+    <small>&copy; 2025 Bootstrap Learning</small>
+  </footer>
+
+  <!-- Including Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
